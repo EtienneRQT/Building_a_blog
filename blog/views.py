@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 
-def stating_page(request):
-    pass
+def starting_page(request):
+    return render(request, 'blog/index.html')
 
 
 def posts(request):
