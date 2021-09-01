@@ -19,5 +19,6 @@ def post_detail(request, slug):
         "blog/post-detail.html",
         {
             "post": identified_post,
+            "tags": identified_post.tags.all(),
         },
     )
