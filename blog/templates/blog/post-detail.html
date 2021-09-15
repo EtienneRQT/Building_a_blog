@@ -53,6 +53,7 @@
        {{ post.content|linebreaks }}
     </main>
 
+    {% if comments %}
     <section id="comments">
         <ul>
             {% for comment in comments %}
@@ -65,6 +66,7 @@
             {% endfor %}
         </ul>
     </section>
+    {% endif %}
 
     <section action="{% url "post-detail-page" post.slug %}" method="POST" id="comment-form">
         <h2>Your Comment</h2>
