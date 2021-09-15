@@ -68,9 +68,9 @@
     </section>
     {% endif %}
 
-    <section action="{% url "post-detail-page" post.slug %}" method="POST" id="comment-form">
+    <section >
         <h2>Your Comment</h2>
-        <form>
+        <form action="{% url "post-detail-page" post.slug %}" method="POST" id="comment-form">
         {% csrf_token %}
             {% for form_field in comment_form %}
             <div class="form-control"> {% if form_field.errors %}invalid{% endif %}
